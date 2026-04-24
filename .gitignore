@@ -1,0 +1,7 @@
+build/ 
+docs/ 
+*.user 
+*.suo 
+.vs/ 
+CMakeCache.txt 
+CMakeFiles/ 

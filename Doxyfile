@@ -1,0 +1,32 @@
+PROJECT_NAME           = "Monitor Jakości Powietrza"
+PROJECT_NUMBER         = 1.0.0
+PROJECT_BRIEF          = "Aplikacja monitorująca jakość powietrza w Polsce (GIOŚ REST API)"
+
+OUTPUT_DIRECTORY       = docs
+OUTPUT_LANGUAGE        = Polish
+
+INPUT                  = src
+RECURSIVE              = YES
+FILE_PATTERNS          = *.h *.cpp
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+HTML_COLORSTYLE        = LIGHT
+
+GENERATE_LATEX         = NO
+
+HAVE_DOT               = NO
+CLASS_DIAGRAMS         = YES
+
+WARN_IF_UNDOCUMENTED   = YES
+WARN_NO_PARAMDOC       = YES
+
+JAVADOC_AUTOBRIEF      = YES
+QT_AUTOBRIEF           = YES
+
+SORT_MEMBER_DOCS       = NO
+SHOW_USED_FILES        = YES
