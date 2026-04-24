@@ -139,7 +139,7 @@ tests/         # testy jednostkowe (Google Test)
 
 - Aplikacja działa w trybie offline korzystając z danych zapisanych w lokalnej bazie JSON
 - Geokodowanie adresów wymaga połączenia z Nominatim (openstreetmap.org)
-- Dane pomiarowe dostępne są za ostatnie 3 doby (ograniczenie API GIOŚ)
+- Dane pomiarowe dostępne są za ostatnie 3 doby
 
 ## Autor
 
