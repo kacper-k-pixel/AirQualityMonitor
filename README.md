@@ -137,9 +137,7 @@ tests/         # testy jednostkowe (Google Test)
 
 ## Uwagi
 
-- Aplikacja używa GIOŚ REST API v1 (`https://api.gios.gov.pl/pjp-api/v1/rest`)  
-  Stare API (`/rest/` bez v1) zostało wycofane 30.06.2025
-- Aplikacja działa w trybie offline korzystając z danych zapisanych w lokalnej bazie JSON (fallback automatyczny przy braku sieci)
+- Aplikacja działa w trybie offline korzystając z danych zapisanych w lokalnej bazie JSON
 - Geokodowanie adresów wymaga połączenia z Nominatim (openstreetmap.org)
 - Dane pomiarowe dostępne są za ostatnie 3 doby (ograniczenie API GIOŚ)
 
