@@ -23,16 +23,21 @@ git clone <url> AirQualityMonitor
 cd AirQualityMonitor
 
 # Konfiguracja CMake (podać własną ścieżkę do Qt)
-cmake -S . -B build -DCMAKE_PREFIX_PATH="C:\Qt\6.x.x\msvc2022_64"
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="C:\Qt\6.x.x\msvc2022_64"
 
 # Kompilacja
 cmake --build build --parallel --config Release
 
-# Kopiowanie DLL Qt
+# Kopiowanie DLL Qt do aplikacji (tylko gdy wystąpi błąd przy uruchomieniu aplikacji)
 C:\Qt\6.x.x\msvc2022_64\bin\windeployqt.exe build\AirQualityMonitor.exe
 
+# Kopiowanie DLL Qt do testów (tylko gdy wystąpi błąd przy uruchomieniu aplikacji)
+C:\Qt\6.x.x\msvc2022_64\bin\windeployqt.exe build\tests\Release\test_JsonParser.exe
+C:\Qt\6.x.x\msvc2022_64\bin\windeployqt.exe build\tests\Release\test_Analyzer.exe
+C:\Qt\6.x.x\msvc2022_64\bin\windeployqt.exe build\tests\Release\test_JsonDatabase.exe
+
 # Uruchomienie
-build\AirQualityMonitor.exe
+build\Release\AirQualityMonitor.exe
 ```
 
 ### Linux / macOS
@@ -137,6 +142,7 @@ tests/         # testy jednostkowe (Google Test)
 
 ## Uwagi
 
+- Aplikacja używa GIOŚ REST API v1 (`https://api.gios.gov.pl/pjp-api/v1/rest`)
 - Aplikacja działa w trybie offline korzystając z danych zapisanych w lokalnej bazie JSON
 - Geokodowanie adresów wymaga połączenia z Nominatim (openstreetmap.org)
 - Dane pomiarowe dostępne są za ostatnie 3 doby
